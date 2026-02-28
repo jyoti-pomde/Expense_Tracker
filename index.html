@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Finance Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>Finance Dashboard</h1>
+  <button onclick="toggleTheme()">Toggle Theme</button>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<div class="container">
+
+<div class="cards">
+  <div class="card"><h3>Balance</h3><p id="balance">₹0</p></div>
+  <div class="card"><h3>Income</h3><p id="income">₹0</p></div>
+  <div class="card"><h3>Expense</h3><p id="expense">₹0</p></div>
+</div>
+
+<form id="form">
+  <input id="desc" placeholder="Description">
+  <input id="amount" type="number" placeholder="Amount">
+  <select id="type">
+    <option value="income">Income</option>
+    <option value="expense">Expense</option>
+  </select>
+  <button>Add</button>
+</form>
+
+<table>
+<thead><tr><th>Description</th><th>Amount</th><th>Type</th></tr></thead>
+<tbody id="list"></tbody>
+</table>
+
+<canvas id="chart"></canvas>
+
+<button onclick="downloadPDF()">Export PDF</button>
+
+</div>
+
+<script src="script.js"></script>
+<script src="pdf.js"></script>
+</body>
+</html>
