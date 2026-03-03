@@ -1,5 +1,6 @@
 const currentUser = localStorage.getItem("loggedInUser");
 if(!currentUser) window.location="auth.html";
+document.getElementById("welcomeUser").textContent="welcome " +currentUser;
 
 let transactions = JSON.parse(
   localStorage.getItem("transactions_"+currentUser)

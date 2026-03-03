@@ -9,6 +9,10 @@ body{
   background:#121212;
   color:#ffffff;
 }
+header span{ 
+  margin-right: 15px;
+  font-weight:bold;
+}
 
 header{
   background:#2c3e50;
